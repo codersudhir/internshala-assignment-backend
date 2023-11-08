@@ -1,16 +1,19 @@
 const mongoose = require('mongoose');
 
 const FORMSCHEMA= new mongoose.Schema({
-    title:{
+    question:{
         type: String,
         required: true,
         unique: true
     },
-    description:{
+    answer:{
         type: String,
         required: true,
         unique: false
     },
+    option:{
+        type: Array,
+    }
    
 },
 { timestamps: true }
