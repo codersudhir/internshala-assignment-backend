@@ -10,8 +10,10 @@ const formdata= require("./routers/form")
 // here core and other node connectivity and ports
 const cors=require("cors")
 const app = express()
-const port = process.env.PORT || 8080
-
+const port = process.env.PORT || 3000
+app.use((req,res)=>{
+    res.send("HOMEpAGE")
+})
 
 // connect to MongoDb server 
 const ConnectDB=async()=>{
